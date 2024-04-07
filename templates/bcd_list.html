@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BCD List</title>
+</head>
+<body>
+    <h1>BCD List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Identifier</th>
+                <th>Size</th>
+                <th>Manufacturer Model</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for bcd in bcds %}
+            <tr>
+                <td>{{ bcd.identifier }}</td>
+                <td>{{ bcd.size }}</td>
+                <td>{{ bcd.manufacturer_model }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wetsuit Order History</title>
+</head>
+<body>
+    <h1>Wetsuit Order History List</h1>
+    <ul>
+        <!-- Loop to display each wetsuit order history -->
+        {% for history in histories %}
+            <li>
+                Wetsuit: {{ history.wetsuit.identifier }},
+                Rental Date: {{ history.rental_date }},
+                Needs Replacing: {{ history.needs_replacing }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

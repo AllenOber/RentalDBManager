@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Pricing List</title>
+</head>
+<body>
+    <h1>Rental Pricing List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Equipment Type</th>
+            <th>Rental Cost</th>
+        </tr>
+        {% for pricing in rental_pricings %}
+            <tr>
+                <td>{{ pricing.id }}</td>
+                <td>{{ pricing.equipment_type }}</td>
+                <td>{{ pricing.rental_cost }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

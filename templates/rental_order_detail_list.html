@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rental Order Details</title>
+</head>
+<body>
+    <h1>Rental Order Detail List</h1>
+    <ul>
+        <!-- Loop to display each rental order detail -->
+        {% for detail in rental_order_details %}
+            <li>
+                Order ID: {{ detail.rental_order.id }},
+                Equipment Type: {{ detail.equipment_type }},
+                Equipment ID: {{ detail.equipment_id }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

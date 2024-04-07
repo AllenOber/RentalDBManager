@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regulator List</title>
+</head>
+<body>
+    <h1>Regulator List</h1>
+    <ul>
+        <!-- Loop to display each regulator -->
+        {% for regulator in regulators %}
+            <li>
+                Name: {{ regulator.set_name }},
+                Needs Replacement: {{ regulator.needs_replacing }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

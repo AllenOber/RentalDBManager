@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work Order List</title>
+</head>
+<body>
+    <h1>Work Order List</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Received Date</th>
+            <th>Target Date</th>
+            <th>Pickup Date</th>
+        </tr>
+        {% for work_order in work_orders %}
+            <tr>
+                <td>{{ work_order.id }}</td>
+                <td>{{ work_order.received_date }}</td>
+                <td>{{ work_order.target_date }}</td>
+                <td>{{ work_order.pickup_date }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

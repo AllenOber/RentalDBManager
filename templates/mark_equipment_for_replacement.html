@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mark Equipment for Replacement</title>
+</head>
+<body>
+    <h1>Mark Equipment for Replacement</h1>
+    <form method="post">
+        {% csrf_token %}  <!-- CSRF token for security -->
+        {{ form.as_p }}  <!-- Render form fields -->
+        <button type="submit">Mark as Needing Replacement</button>
+    </form>
+</body>
+</html>

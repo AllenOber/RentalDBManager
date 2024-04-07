@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regulator Details</title>
+</head>
+<body>
+    <h1>Regulator Detail List</h1>
+    <ul>
+        <!-- Loop to display each regulator detail -->
+        {% for detail in regulator_details %}
+            <li>
+                Type: {{ detail.part_type }},
+                Model: {{ detail.model }},
+                Serial: {{ detail.serial }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wetsuit List</title>
+</head>
+<body>
+    <h1>Wetsuit List</h1>
+    <ul>
+        <!-- Loop to display each wetsuit -->
+        {% for wetsuit in wetsuits %}
+            <li>
+                Identifier: {{ wetsuit.identifier }},
+                Size: {{ wetsuit.size }},
+                Manufacturer Model: {{ wetsuit.manufacturer_model }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

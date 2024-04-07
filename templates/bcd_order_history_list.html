@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BCD Order History</title>
+</head>
+<body>
+    <h1>BCD Order History List</h1>
+    <ul>
+        <!-- Loop to display each BCD order history -->
+        {% for history in histories %}
+            <li>
+                ID: {{ history.id }},
+                Rental Date: {{ history.rental_date }},
+                Status: {{ history.status }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

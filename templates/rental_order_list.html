@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rental Order List</title>
+</head>
+<body>
+    <h1>Rental Orders</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>BCD</th>
+                <th>Regulator</th>
+                <th>Wetsuit</th>
+                <th>Rental Date</th>
+                <th>Return Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rental_order in rental_orders %}
+            <tr>
+                <td>{{ rental_order.customer.name }}</td>
+                <td>{{ rental_order.bcd.identifier }}</td>
+                <td>{{ rental_order.regulator.set_name }}</td>
+                <td>{{ rental_order.wetsuit.identifier }}</td>
+                <td>{{ rental_order.rental_date }}</td>
+                <td>{{ rental_order.return_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
